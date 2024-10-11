@@ -1,8 +1,15 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Gallery{% endblock %}
 
 {% block content %}
 <h1>Image Gallery</h1>
 <h3>This is gallery page with pictures.</h3>
+<div class="gallery">
+    <img src="{% static 'media/cover.png' %}" alt="Image 1">
+    <img src="{% static 'media/manay_das.jpg' %}" alt="Image 2">
+    <img src="{% static 'media/manay_das1.jpg' %}" alt="Image 3">
+    <img src="{% static 'media/manay_das2.jpg' %}" alt="Image 4">
+    <img src="{% static 'media/om_logo.jpeg' %}" alt="Image 5">
+</div>  
 {% endblock %}
