@@ -122,3 +122,18 @@ a:hover {
 .fa-envelope {
     color: #cc0000;
 }
+
+/* Gallery page styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images horizontally */
+  }
+  
+  .gallery img {
+    width: 200px;  /* Adjust image width as needed */
+    height: auto;
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  }
