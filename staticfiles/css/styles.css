@@ -9,7 +9,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #000000;
+    background-color: #4e342e; /* Dark brown */
     padding: 20px;
     text-align: center;
 }
@@ -26,13 +26,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #ffffff; /* Soft red */
+    color: #e57373; /* Soft red */
     text-decoration: none;
     font-weight: bold;
 }
 
 header nav ul li a:hover {
-    color: 	#c19c60; /* Gold on hover */
+    color: #ef5350; /* Brighter red on hover */
 }
 
 /* Main content styles */
@@ -42,7 +42,7 @@ main {
 }
 
 main h1 {
-    color: #c19c60; /* Gold */
+    color: #ff8a65; /* Light red/orange */
     margin-bottom: 20px;
 }
 
@@ -79,16 +79,11 @@ button:hover {
 /* About page styles */
 .container {
     max-width: 50%;
-    /* margin: 0 auto;     Centers the div */
+    margin: 0 auto; /* Center the div */
 }
   
 @media (max-width: 768px) {
     .container {
       max-width: 100%; /* Make the div full width on smaller screens */
     }
-}
-
-.container img {
-    max-width: 100%;  /* Make the image fit within the container */
-    height: auto;     /* Maintain aspect ratio */
 }

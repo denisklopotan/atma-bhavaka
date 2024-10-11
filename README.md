@@ -1,4 +1,4 @@
-![ATMA-BHAVAKA](media/cover.png)
+![ATMA-BHAVAKA](/static/media/cover.png)
 
 # Ātma-bhāvaka - Express your Soul!
 
