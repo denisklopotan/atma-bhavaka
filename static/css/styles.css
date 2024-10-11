@@ -1,10 +1,13 @@
 /* Base styles for the body */
 body {
-    background-color: #2b2b2b; /* Dark gray/black background */
-    color: #f5f5f5;            /* Light text for readability */
+    background-color: #cccccc; /* Dark gray/black background */
+    color: #000000;            /* Light text for readability */
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+    flex-direction: column; /* Arrange content vertically */
 }
 
 /* Header styles */
@@ -26,7 +29,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #ffffff; /* Soft red */
+    color: #ffffff;
     text-decoration: none;
     font-weight: bold;
 }
@@ -38,7 +41,8 @@ header nav ul li a:hover {
 /* Main content styles */
 main {
     padding: 20px;
-    background-color: #3e2723; /* Darker brown */
+    background-color: #ffffff;
+    flex: 1; /* Allow the main content area to expand and push the footer down */
 }
 
 main h1 {
@@ -48,18 +52,22 @@ main h1 {
 
 main p {
     line-height: 1.6;
-    color: #f5f5f5; /* Light text */
+    color: #000000;
 }
 
 /* Footer styles */
 footer {
-    background-color: #212121; /* Almost black */
-    color: #9e9e9e;            /* Light gray text */
+    background-color: #c19c60;
+    color: #000000;
     text-align: center;
-    padding: 10px;
-    position: fixed;
+    /* padding: 10px; */
+    /* position: fixed; */
     width: 100%;
     bottom: 0;
+}
+
+h3 {
+    font-weight: unset;
 }
 
 /* Button styles */
@@ -91,4 +99,26 @@ button:hover {
 .container img {
     max-width: 100%;  /* Make the image fit within the container */
     height: auto;     /* Maintain aspect ratio */
+}
+
+/* Contact page styles */
+.contact {
+    text-decoration: none;  /* Removes underline */
+    color: black;           /* Sets the link text color to black */
+}
+
+a:hover { 
+    color: #c19c60;
+}
+
+.fa-whatsapp {
+    color: #25D366;
+}
+
+.fa-telegram {
+    color: #0088cc;
+}
+
+.fa-envelope {
+    color: #cc0000;
 }
