@@ -26,7 +26,7 @@ SECRET_KEY = '***REMOVED***'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-denisklopot-atmabhavaka-0nsvcrmv7zs.ws-eu115.gitpod.io']
+ALLOWED_HOSTS = ['8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io']
 
 SITE_ID = 1
 
