@@ -84,6 +84,23 @@ button:hover {
     background-color: #d84315; /* Slightly brighter red on hover */
 }
 
+/* Home page styles */
+
+details {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer; /* Change the cursor to a pointer on hover */
+}
+
+summary h2 {
+    display: inline; /* or display: inline-block; */
+  }
+
 /* About page styles */
 .container {
     max-width: 50%;
