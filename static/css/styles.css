@@ -101,6 +101,10 @@ summary h2 {
     display: inline; /* or display: inline-block; */
   }
 
+#references {
+    font-size: small;
+}
+
 /* About page styles */
 .container {
     max-width: 50%;
