@@ -11,8 +11,8 @@ def about_view(request):
 def contact_view(request):
     return render(request, 'contact.html')
 
-def experiences_view(request):
-    return render(request, 'experiences.html')
+def learn_view(request):
+    return render(request, 'learn.html')
 
 def gallery_view(request):
     return render(request, 'gallery.html')
