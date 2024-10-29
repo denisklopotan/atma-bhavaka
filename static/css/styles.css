@@ -21,11 +21,24 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex; /* Add this */
+    align-items: center; /* Add this */
+    justify-content: center; /* Add this */
 }
 
 header nav ul li {
     display: inline;
     margin-right: 20px;
+}
+
+/* Add these two new rules */
+header nav ul li:first-child { 
+    margin-right: auto;
+    /* font-size: 2em; */
+}
+  
+  header nav ul li:last-child {
+    margin-left: auto;
 }
 
 header nav ul li a {
