@@ -1,7 +1,8 @@
-/* Base styles for the body */
+/**** BASE BODY STYLES ****/
+
 body {
-    background-color: #cccccc; /* Dark gray/black background */
-    color: #000000;            /* Light text for readability */
+    background-color: #cccccc;
+    color: #000000;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -10,7 +11,8 @@ body {
     flex-direction: column; /* Arrange content vertically */
 }
 
-/* Header styles */
+/* HEADER & NAVBAR STYLES */
+
 header {
     background-color: #000000;
     padding: 20px;
@@ -21,9 +23,9 @@ header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Add this */
-    align-items: center; /* Add this */
-    justify-content: center; /* Add this */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 header nav ul li {
@@ -31,7 +33,6 @@ header nav ul li {
     margin-right: 20px;
 }
 
-/* Add these two new rules */
 header nav ul li:first-child { 
     margin-right: auto;
     /* font-size: 2em; */
@@ -51,9 +52,13 @@ header nav ul li a:hover {
     color: 	#c19c60; /* Gold on hover */
 }
 
-/* Main content styles */
+/* MAIN CONTENT STYLES */
+
 main {
     padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background-color: #ffffff;
     flex: 1; /* Allow the main content area to expand and push the footer down */
 }
@@ -68,7 +73,8 @@ main p {
     color: #000000;
 }
 
-/* Footer styles */
+/* FOOTER STYLES */
+
 footer {
     background-color: #c19c60;
     color: #000000;
@@ -83,21 +89,7 @@ h3 {
     font-weight: unset;
 }
 
-/* Button styles */
-button {
-    background-color: #bf360c; /* Deep red */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #d84315; /* Slightly brighter red on hover */
-}
-
-/* Home page styles */
+/* HOME PAGE STYLES */
 
 details {
     background-color: #f0f0f0;
@@ -118,7 +110,8 @@ summary h2 {
     font-size: small;
 }
 
-/* About page styles */
+/* ABOUT PAGE STYLES */
+
 .container {
     max-width: 50%;
     /* margin: 0 auto;     Centers the div */
@@ -135,10 +128,11 @@ summary h2 {
     height: auto;     /* Maintain aspect ratio */
 }
 
-/* Contact page styles */
+/* CONTACT PAGE STYLES */
+
 .contact {
     text-decoration: none;  /* Removes underline */
-    color: black;           /* Sets the link text color to black */
+    color: black;         /* Sets the link text color to black */
 }
 
 a:hover { 
@@ -156,18 +150,3 @@ a:hover {
 .fa-instagram-square {
     color: #f56040;
 }
-
-/* Gallery page styles */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers images horizontally */
-  }
-  
-  .gallery img {
-    width: 200px;  /* Adjust image width as needed */
-    height: auto;
-    margin: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-  }

@@ -14,5 +14,5 @@ def contact_view(request):
 def learn_view(request):
     return render(request, 'learn.html')
 
-def gallery_view(request):
-    return render(request, 'gallery.html')
+# def gallery_view(request):
+#     return render(request, 'gallery.html')
