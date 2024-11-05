@@ -1,0 +1,1 @@
+web: gunicorn atma_bhavaka.wsgi
