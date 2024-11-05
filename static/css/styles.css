@@ -38,7 +38,7 @@ header nav ul li:first-child {
     /* font-size: 2em; */
 }
   
-  header nav ul li:last-child {
+header nav ul li:last-child {
     margin-left: auto;
 }
 
