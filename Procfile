@@ -1,1 +1,1 @@
-web: gunicorn atma_bhavaka.wsgi
+web: gunicorn atma_bhavaka.wsgi:application
