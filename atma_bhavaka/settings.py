@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     # '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io',
-    'https://atma-bhavaka-2a6f708e729b.herokuapp.com/'
+    'atma-bhavaka-2a6f708e729b.herokuapp.com'
 ]
 
 SITE_ID = 1
