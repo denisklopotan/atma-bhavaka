@@ -28,10 +28,10 @@ else:
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io',
+    # '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io',
     'atma-bhavaka-2a6f708e729b.herokuapp.com',
     'www.atma-bhavaka.com',
     '.atma-bhavaka.com',
@@ -136,7 +136,10 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-denisklopot-atmabhavaka-0nsvcrmv7zs.ws-eu115.gitpod.io'
+    'https://8000-denisklopot-atmabhavaka-0nsvcrmv7zs.ws-eu115.gitpod.io',
+    'https://atma-bhavaka-2a6f708e729b.herokuapp.com',
+    'https://www.atma-bhavaka.com', 
+    'https://.atma-bhavaka.com',
 ]
 
 
