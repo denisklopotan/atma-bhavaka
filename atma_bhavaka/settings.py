@@ -22,6 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # When working in production SECRET_KEY will be retrieved from env.py, else from enviroment variables (VAR):
+
 if os.path.isfile('env.py'):
     import env
 else:
