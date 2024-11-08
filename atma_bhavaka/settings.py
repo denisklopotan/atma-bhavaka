@@ -17,19 +17,24 @@ import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+# When working in production SECRET_KEY will be retrieved from env.py, else from enviroment variables (VAR):
+if os.path.isfile('env.py'):
+    import env
+else:
+    SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    # '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io',
-    'atma-bhavaka-2a6f708e729b.herokuapp.com'
+    '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu116.gitpod.io',
+    'atma-bhavaka-2a6f708e729b.herokuapp.com',
+    'www.atma-bhavaka.com',
+    '.atma-bhavaka.com',
 ]
 
 SITE_ID = 1
