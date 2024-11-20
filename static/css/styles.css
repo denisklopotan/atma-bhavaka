@@ -1,7 +1,7 @@
 /**** BASE BODY STYLES ****/
 
 body {
-    background-color: #cccccc;
+    background-color: black;
     color: #ffffff;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,10 +11,11 @@ body {
     flex-direction: column; /* Arrange content vertically */
 }
 
-/* HEADER & NAVBAR */
+/*** HEADER & NAVBAR ***/
 
 header {
     background-color: #000000;
+    border-bottom: 1px solid #474747;
     padding: 20px;
     text-align: center;
 }
@@ -26,6 +27,7 @@ header nav ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: large;
 }
 
 header nav ul li {
@@ -52,47 +54,75 @@ header nav ul li a:hover {
     color: 	#c19c60; /* Gold on hover */
 }
 
-/* MAIN CONTENT */
+/*** MAIN STYLES ***/
 
 main {
-    padding: 20px;
+    line-height: 1.6;
+    padding: 0px 20px 40px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: #333333;
     flex: 1; /* Allow the main content area to expand and push the footer down */
 }
 
-main h1 {
-    color: #c19c60; /* Gold */
-    margin-bottom: 20px;
+/* HOME PAGE */
+
+.title {
+    color: #c19c60; 
+    /* background-color: #212121; */
+    position: absolute;
+    text-align: center;
+    /* width: calc(100% + 40px); 100% + 20px left padding + 20px right padding */
+    padding: 0px 0;
 }
 
-main p {
-    line-height: 1.6;
-    color: #ffffff;
+/* Cover image */
+
+.cover {
+    text-align: center;
 }
 
-/* Containers, content & media resizing */
+.cover img {
+    width: 90%;
+    height: auto; 
+}
+
+@media (max-width: 768px) {
+    .cover {
+        display: flex; 
+        justify-content: center;
+    }
+    .cover img {
+        width: 200%; 
+    }
+}
+
+/* Container */
 
 .container {
     max-width: 50%;
-    /* margin: 0 auto;     Centers the div */
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .container {
-      max-width: 100%; /* Make the div full width on smaller screens */
+      max-width: 100%; /* full width on smaller screens */
     }
 }
 
-.container img {
-    max-width: 100%;  /* Make the image fit within the container */
-    height: auto;     /* Maintain aspect ratio */
+.quote {
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: center;
+    text-justify: inter-word; 
+    font-size: 21px;
+    text-shadow: 4px 4px 8px rgb(0, 0, 0);
+    padding-bottom: 20px;
 }
 
-/* Make embedded video resize with window and mantain aspect ratio */
-.video-container {
+/* Video resizing */
+
+.video {
     position: relative;
     width: 100%;
     padding-bottom: 56.25%; /* 16:9 aspect ratio (9 / 16 = 0.5625) */
@@ -100,7 +130,7 @@ main p {
     overflow: hidden;
 }
 
-.video-container iframe {
+.video iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -122,22 +152,25 @@ summary {
 }
 
 summary h2 {
-    display: inline; /* or display: inline-block; */
+    display: inline;
   }
 
 #references {
     font-size: small;
 }
 
+/* ABOUT PAGE */
+
+.container img {
+    max-width: 100%;  /* Make the image fit within the container */
+    height: auto;     /* Maintain aspect ratio */
+}
+
 /* CONTACT PAGE */
 
 .contact {
     text-decoration: none;  /* Removes underline */
-    color: #ffffff;         /* Sets the link text color to black */
-}
-
-a:hover { 
-    color: #c19c60;
+    color: #ffffff;
 }
 
 .fa-phone {
@@ -152,6 +185,10 @@ a:hover {
     color: #f56040;
 }
 
+a:hover { 
+    color: #c19c60;
+}
+
 /* FOOTER STYLES */
 
 footer {
@@ -162,8 +199,4 @@ footer {
     /* position: fixed; */
     width: 100%;
     bottom: 0;
-}
-
-h3 {
-    font-weight: unset;
 }
