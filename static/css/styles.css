@@ -25,7 +25,7 @@ header {
     background-color: #b59054bd;
     color: #000000;
     /* background-image: linear-gradient(to bottom, black, rgb(149, 149, 149)); */
-    border-bottom: 1px solid #474747;
+    /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
     text-align: center;
 }
