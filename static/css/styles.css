@@ -19,15 +19,22 @@ body {
     margin: 0; /* Remove default margin */
     padding: 25px 20px;
     text-align: center;
+    /* font-family: "Modern Antiqua", serif; */
+    /* font-family: "Mea Culpa", serif; */
+    /* font-family: "Srisakdi", serif; */
+    font-family: "Tapestry", serif;
+    font-weight: 400;
+    font-size: 50px;
+    /* text-shadow: 4px 4px 8px rgb(0, 0, 0); */
 }
 
 header {
     background-color: #b59054bd;
     color: #000000;
-    /* background-image: linear-gradient(to bottom, black, rgb(149, 149, 149)); */
     /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
     text-align: center;
+    font-family: "Tapestry", serif;
 }
 
 header nav ul {
@@ -44,15 +51,6 @@ header nav ul li {
     display: inline;
     margin-right: 20px;
 }
-
-/* header nav ul li:first-child { 
-    margin-right: auto;
-    font-size: 2em;
-} */
-  
-/* header nav ul li:last-child {
-    margin-left: auto;
-} */
 
 header nav ul li a {
     color: #000000;
@@ -105,7 +103,6 @@ main {
     max-width: 50%;
     margin: 0 auto;
     position: relative; 
-    /* overflow: hidden; Remove this line */
 }
 
 @media (max-width: 768px) {
@@ -218,8 +215,6 @@ footer {
     background-color: #2c1e12;
     color: #dfb269;
     text-align: center;
-    /* padding: 10px; */
-    /* position: fixed; */
     width: 100%;
     bottom: 0;
 }
