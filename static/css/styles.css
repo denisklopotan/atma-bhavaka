@@ -1,4 +1,4 @@
-/**** BASE BODY STYLES ****/
+/**** BASE STYLES ****/
 
 body {
     background-color: black;
@@ -9,6 +9,24 @@ body {
     display: flex;
     min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
     flex-direction: column; /* Arrange content vertically */
+}
+
+main {
+    line-height: 1.6;
+    padding: 20px 20px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1; /* Allow the main content area to expand and push the footer down */
+    /* max-width: 50%;
+    margin: 0 auto;  */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) { 
+    main {
+      max-width: 100%; /* Make main take full width */
+    }
 }
 
 /*** HEADER & NAVBAR ***/
@@ -34,7 +52,7 @@ header {
     /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
     text-align: center;
-    font-family: "Tapestry", serif;
+    font-family: auto, serif;
 }
 
 header nav ul {
@@ -60,17 +78,6 @@ header nav ul li a {
 
 header nav ul li a:hover {
     color: 	#c19c60; /* Gold on hover */
-}
-
-/*** MAIN STYLES ***/
-
-main {
-    line-height: 1.6;
-    padding: 20px 20px 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex: 1; /* Allow the main content area to expand and push the footer down */
 }
 
 /* HOME PAGE */
