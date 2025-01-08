@@ -14,7 +14,6 @@ body {
 main {
     line-height: 1.6;
     padding: 20px 20px 40px;
-    /* display: flex; */
     align-items: center;
     flex-direction: column;
     flex: 1; /* Allow the main content area to expand and push the footer down */
@@ -31,6 +30,7 @@ main {
 
 #webpage-title {
     background-color: #c19c60;
+    /* background-color: #c9a160; */
     color: #000;
     margin: 0;
     padding: 25px 20px;
@@ -172,7 +172,8 @@ header nav ul li a:hover {
 /* LEARN PAGE */
 
 details {
-    background-color: #bf9c4a;
+    /* background-color: #bf9c4a; */
+    background-color: #d3af5a;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -194,7 +195,7 @@ summary h2 {
 /* ABOUT PAGE */
 
 .about-page {
-    background-color: #c97031;
+    background-color: #f19856;
     padding: 20px;
     border-radius: 10px;
 }
@@ -207,10 +208,10 @@ summary h2 {
 /* CONTACT PAGE */
 
 .contact-page {
-    background-color: #b93737;
+    background-color: #e78585;
     padding: 20px;
     border-radius: 10px;
-    width: 100%;
+    width: auto;
 }
 
 @media (max-width: 768px) {
