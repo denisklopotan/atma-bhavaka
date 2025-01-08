@@ -4,8 +4,14 @@
 {% block extracss %}
 <style>
     main {
-        background-color: #805c0a; /* contact page background color */
-        color: whitesmoke;
+        background-color: #c9a655; /* contact page background color */
+        padding: 40px 20px 40px;
+    }
+
+    @media (max-width: 768px) {
+    main {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
     }
 </style>
 {% endblock %}

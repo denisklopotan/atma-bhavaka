@@ -2,7 +2,7 @@
 
 body {
     background-color: black;
-    color: #ffffff;
+    color: black;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -14,7 +14,7 @@ body {
 main {
     line-height: 1.6;
     padding: 20px 20px 40px;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     flex-direction: column;
     flex: 1; /* Allow the main content area to expand and push the footer down */
@@ -172,9 +172,10 @@ header nav ul li a:hover {
 /* LEARN PAGE */
 
 details {
-    /* background-color: #8f7500; */
-    padding: 10px;
+    background-color: #bf9c4a;
+    padding: 20px;
     margin-bottom: 10px;
+    border-radius: 10px;
 }
 
 summary {
@@ -192,6 +193,12 @@ summary h2 {
 
 /* ABOUT PAGE */
 
+.about-page {
+    background-color: #c97031;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .container img {
     max-width: 100%;  /* Make the image fit within the container */
     height: auto;     /* Maintain aspect ratio */
@@ -199,9 +206,22 @@ summary h2 {
 
 /* CONTACT PAGE */
 
-.contact {
+.contact-page {
+    background-color: #b93737;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        width: auto;
+    }
+}
+
+.contact-link {
     text-decoration: none;  /* Removes underline */
-    color: #ffffff;
+    color: black;
 }
 
 .fa-phone {
