@@ -172,8 +172,8 @@ header nav ul li a:hover {
 /* LEARN PAGE */
 
 details {
-    /* background-color: #bf9c4a; */
-    background-color: #d3af5a;
+    /* background-color: #d3af5a; */
+    background-color: #b6b759;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -195,7 +195,8 @@ summary h2 {
 /* ABOUT PAGE */
 
 .about-page {
-    background-color: #f19856;
+    /* background-color: #df955f; */
+    background-color: #d3af5a;
     padding: 20px;
     border-radius: 10px;
 }
@@ -208,7 +209,8 @@ summary h2 {
 /* CONTACT PAGE */
 
 .contact-page {
-    background-color: #e78585;
+    /* background-color: #b0b158; */
+    background-color: #e7965a;
     padding: 20px;
     border-radius: 10px;
     width: auto;
