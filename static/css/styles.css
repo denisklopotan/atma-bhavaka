@@ -248,7 +248,15 @@ a:hover {
 footer {
     background-color: #2c1e12;
     color: #dfb269;
-    text-align: center;
     width: 100%;
     bottom: 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+}
+
+.copyright {
+    text-align: center;
 }
