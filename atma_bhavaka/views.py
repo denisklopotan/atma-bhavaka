@@ -8,8 +8,8 @@ def home_view(request):
 def about_view(request):
     return render(request, 'about.html')
 
-def contact_view(request):
-    return render(request, 'contact.html')
+def book_view(request):
+    return render(request, 'book.html')
 
 def learn_view(request):
     return render(request, 'learn.html')

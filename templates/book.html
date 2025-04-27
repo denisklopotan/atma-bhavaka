@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+{% block title %}Bookings{% endblock %}
+
+{% block extracss %}
+<style>
+    main {
+        background-color: #cf824a; /* contact page background color */
+        /* background-color: #9c9d49; */
+        padding: 40px 20px 40px;
+    }
+
+    @media (max-width: 768px) {
+    main {
+        padding: 20px; /* Reduced padding for smaller screens */
+    }
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- <h1>Contact & Bookings</h1> -->
+<!-- Contact Links -->
+<div class="container">
+  <div class="book-page">
+    <h2 style="margin-top: 0px;">Packages:</h2>
+    <div class="classes-section">
+      <div class="class-card">
+        <h3>First Lesson Special</h3>
+        <ul>
+          <li>Offer: €9 off the first lesson</li>
+          <li>Price: €18 for a single 3-hour session</li>
+          <li>Details: Get started with a discounted rate on your first session.</li>
+        </ul>
+      </div>
+
+      <div class="class-card">
+        <h3>Single Session</h3>
+        <ul>
+          <li>Price: €27</li>
+          <li>Details: One 3-hour session with no commitment, ideal for a single drop-in experience.</li>
+        </ul>
+      </div>
+
+      <div class="class-card">
+        <h3>3-Day Pass</h3>
+        <ul>
+          <li>Price: €78 (€26 per session)</li>
+          <li>Validity: Use within 3 months</li>
+          <li>Details: Access any 3 sessions with a small discount to encourage consistency.</li>
+          <li>Savings: €3 discount</li>
+        </ul>
+      </div>
+
+      <div class="class-card">
+        <h3>5-Day Pass</h3>
+        <ul>
+          <li>Price: €126 (€25.20 per session)</li>
+          <li>Validity: Use within 5 months</li>
+          <li>Details: Enjoy five sessions with a moderate discount for regular practice.</li>
+          <li>Savings: €9 discount</li>
+        </ul>
+      </div>
+
+      <div class="class-card">
+        <h3>7-Day Pass</h3>
+        <ul>
+          <li>Price: €171 (€24.43 per session)</li>
+          <li>Validity: Use within 6 months</li>
+          <li>Details: A 7-session option with a larger discount, ideal for deeper engagement.</li>
+          <li>Savings: €18 discount</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr style="border: 1px solid #cf824a; margin: 20px 0;">
+
+    <h2 style="margin-top: 20px;">Info & Bookings</h2>
+    <div>
+      <h3><strong>For additional information and bookings, please contact me directly:</strong></h3>
+      <ul>
+        <li>
+          <a class="contact-link" href="tel:+4917610716264" target="_blank" rel="noopener">
+            <b>Mobile:</b> +4917610716264
+          </a>
+        </li>
+        <li>
+          <a class="contact-link" href="mailto:jarin.z@hotmail.de" rel="noopener">
+            <b>Email:</b> jarin.z@hotmail.de
+          </a>
+        </li>
+        <li>
+          <a class="contact-link" href="https://www.instagram.com/instagram_profile" target="_blank" rel="noopener">
+            <b>Instagram:</b> atma_bhavaka
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3><strong>Workshop address:</strong></h3>
+      <ul>
+        <li>Buitendijk 2</li>
+        <li>5211WJ Den Bosch</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3><strong>Company info:</strong></h3>
+      <ul>
+        <li>Van Emmichoven</li>
+        <li>Veldwijkstraat 1</li>
+        <li>5213CT Den Bosch</li>
+        <li>KVK Number: 87915138</li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
