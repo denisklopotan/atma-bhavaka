@@ -30,13 +30,12 @@ else:
     SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu118.gitpod.io',
-    'atma-bhavaka-2a6f708e729b.herokuapp.com',
     'www.atma-bhavaka.com',
     '.atma-bhavaka.com',
+    'atma-bhavaka.com',
 ]
 
 SITE_ID = 1
