@@ -172,8 +172,8 @@ header nav ul li a:hover {
 /* LEARN PAGE */
 
 details {
-    /* background-color: #d3af5a; */
-    background-color: #b6b759;
+    /* background-color: #b6b759; */
+    background-color: #d3af5a;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -209,8 +209,8 @@ summary h2 {
 /* BOOK PAGE */
 
 .book-page {
-    /* background-color: #b0b158; */
-    background-color: #e7965a;
+    /* background-color: #e7965a; */
+    background-color: #d3af5a;
     padding: 20px;
     border-radius: 10px;
     width: auto;
