@@ -30,7 +30,7 @@ else:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-for-gitpod')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 ALLOWED_HOSTS = [
     '8000-denisklopot-atmabhavaka-q3ovdhridwc.ws-eu118.gitpod.io',
