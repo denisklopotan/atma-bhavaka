@@ -29,7 +29,7 @@ main {
 /*** HEADER & NAVBAR ***/
 
 #webpage-title {
-    background-color: #daab5f;
+    background-color: #d9a955;
     /* background-color: #c9a160; */
     color: #2c1e12;
     margin: 0;
@@ -44,7 +44,7 @@ main {
 }
 
 header {
-    background-color: #bd9149;
+    background-color: #c9a04d;
     color: #000000;
     /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
@@ -73,7 +73,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-    color: 	#c19c60; /* Gold on hover */
+    color: 	#eeeeee; /* Color on hover */
 }
 
 /*** HOME PAGE ***/
@@ -172,8 +172,8 @@ header nav ul li a:hover {
 /* LEARN PAGE */
 
 details {
-    /* background-color: #d3af5a; */
-    background-color: #b6b759;
+    /* background-color: #b6b759; */
+    background-color: #d3af5a;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -209,8 +209,8 @@ summary h2 {
 /* BOOK PAGE */
 
 .book-page {
-    /* background-color: #b0b158; */
-    background-color: #e7965a;
+    /* background-color: #e7965a; */
+    background-color: #d3af5a;
     padding: 20px;
     border-radius: 10px;
     width: auto;
