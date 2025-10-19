@@ -27,7 +27,7 @@ if os.path.isfile('env.py'):
     import env
     SECRET_KEY = env.SECRET_KEY
 else:
-    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-dev-key-for-gitpod')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,6 +38,7 @@ ALLOWED_HOSTS = [
     'www.atma-bhavaka.com',
     '.atma-bhavaka.com',
     'atma-bhavaka.com',
+    '*',  # Allow all hosts in development
 ]
 
 SITE_ID = 1
@@ -143,6 +144,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://atma-bhavaka-2a6f708e729b.herokuapp.com',
     'https://www.atma-bhavaka.com', 
     'https://.atma-bhavaka.com',
+    'https://*.gitpod.dev',
+    'https://*.gitpod.io',
 ]
 
 
