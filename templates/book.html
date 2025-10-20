@@ -34,9 +34,10 @@
     }
 
     .qr-code {
-        width: 200px;
+        width: 110px;
         height: auto;
         flex-shrink: 0;
+        padding: 32.5px;
     }
 
     @media (max-width: 768px) {
@@ -46,15 +47,22 @@
     
     .class-card {
         flex-direction: column;
+        align-items: flex-start;
     }
     
     .qr-code {
-        width: 100%;
-        max-width: 100%;
+        width: 110px;
+        padding: 0;
+        margin-left: 40px;
     }
     
     .stemexpressie-booking {
         flex-direction: column !important;
+        align-items: flex-start;
+    }
+    
+    .stemexpressie-booking .qr-code {
+        margin-left: 40px;
     }
     }
 </style>
@@ -83,7 +91,9 @@
             <li>Details: Get started with a discounted rate on your first session.</li>
           </ul>
         </div>
-        <img src="{% static 'media/QR-first.png' %}" alt="QR Code for First Lesson" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/3w1pwfyQUkuXMRGDfGD3vC" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-first.png' %}" alt="QR Code for First Lesson" class="qr-code">
+        </a>
       </div>
 
       <div class="class-card">
@@ -94,7 +104,9 @@
             <li>Details: One 3-hour session with no commitment, ideal for a single drop-in experience.</li>
           </ul>
         </div>
-        <img src="{% static 'media/QR-single.png' %}" alt="QR Code for Single Session" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/5w4Za7bHhnx5GXLWDpNfdH" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-single.png' %}" alt="QR Code for Single Session" class="qr-code">
+        </a>
       </div>
 
       <div class="class-card">
@@ -107,7 +119,9 @@
             <li>Savings: €3 discount</li>
           </ul>
         </div>
-        <img src="{% static 'media/QR-3day.png' %}" alt="QR Code for 3-Day Pass" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/jhWdr1fiz33YHziz4CwXCu" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-3day.png' %}" alt="QR Code for 3-Day Pass" class="qr-code">
+        </a>
       </div>
 
       <div class="class-card">
@@ -120,7 +134,9 @@
             <li>Savings: €9 discount</li>
           </ul>
         </div>
-        <img src="{% static 'media/QR-5day.png' %}" alt="QR Code for 5-Day Pass" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/tHJ2ekc9sBni5bhP3rXGZt" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-5day.png' %}" alt="QR Code for 5-Day Pass" class="qr-code">
+        </a>
       </div>
 
       <div class="class-card">
@@ -133,11 +149,13 @@
             <li>Savings: €18 discount</li>
           </ul>
         </div>
-        <img src="{% static 'media/QR-7day.png' %}" alt="QR Code for 7-Day Pass" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/xcGKdorUj7XRCkJp6Q6LAn" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-7day.png' %}" alt="QR Code for 7-Day Pass" class="qr-code">
+        </a>
       </div>
     </div>
 
-    <hr style="border: 1px solid #8b6f47; margin: 40px 0 30px;">
+    <hr style="border: 1px solid #8b6f47; margin: 10px 0 30px;">
 
     <div style="margin-bottom: 30px;">
       <h3>Stemexpressie</h3>
@@ -198,7 +216,9 @@
           <li>The cost of the basic course is €127</li>
           <li>The basic course lasts 12 hours (three hours per evening)</li>
         </ul>
-        <img src="{% static 'media/QR-Stemexpressie .png' %}" alt="QR Code for Stemexpressie" class="qr-code">
+        <a href="https://tikkie.me/pay/VanEmmichov/tQFjmpdmysN9fxVVM2AHcs" target="_blank" rel="noopener">
+          <img src="{% static 'media/QR-Stemexpressie .png' %}" alt="QR Code for Stemexpressie" class="qr-code">
+        </a>
       </div>
     </div>
 
