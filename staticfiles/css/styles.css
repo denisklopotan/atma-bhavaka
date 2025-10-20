@@ -274,6 +274,7 @@ footer ul {
     list-style-type: none;
     padding: 20px;
     margin: 0px;
+    font-size: 18px;
 }
 
 .footer-links {
@@ -283,7 +284,7 @@ footer ul {
 
 footer span {
     color: #978c79;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 footer i {
@@ -299,4 +300,18 @@ footer i {
 .heart {
     color: red;
     font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .footer-contact-info {
+        display: none;
+    }
+    
+    footer ul {
+        font-size: 17px;
+    }
+    
+    footer span {
+        font-size: 17px;
+    }
 }
