@@ -1,5 +1,10 @@
 /**** BASE STYLES ****/
 
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 body {
     background-color: black;
     color: black;
@@ -96,7 +101,8 @@ header nav ul li a:hover {
         justify-content: center;
     }
     .cover img {
-        width: 180%;
+        width: 100%;
+        max-width: 100%;
     }
 }
 
