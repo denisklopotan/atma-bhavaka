@@ -15,6 +15,36 @@
     }
     }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let isToggling = false;
+        let savedScrollY = 0;
+        
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('click', function(e) {
+                if (e.target.tagName === 'SUMMARY' || e.target.closest('summary')) {
+                    isToggling = true;
+                    savedScrollY = window.scrollY;
+                }
+            });
+        });
+        
+        const observer = new MutationObserver(() => {
+            if (isToggling) {
+                window.scrollTo(0, savedScrollY);
+                setTimeout(() => {
+                    isToggling = false;
+                }, 100);
+            }
+        });
+        
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+            attributes: true
+        });
+    });
+</script>
 {% endblock %}
 
 {% block content %}
