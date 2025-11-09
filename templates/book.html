@@ -75,172 +75,78 @@
   <div class="book-page">
     <h2 style="margin-top: 0px;">Program & Booking</h2>
     
+    {% if atma_intro %}
     <div style="margin-bottom: 30px;">
-      <h3>Atma Bhavaka</h3>
-      <p>Ātmā Bhāvaka is a practice that blends the insights of ancient spiritual traditions with modern psychological principles. Its three core elements - intuitive voice expression, spiritual-orientated framework, and intuitive body movement - create a holistic approach to self-exploration and inner alignment (read more under "About").</p>
-      <p>In comparison with Stemexpressie and Fenix - Voice Expression, this course has a stronger focus on the spiritual dimension of this work and thereby has the potential to be a powerful tool in helping us to re-discover ourselves and strengthen our relationship with Love, God, and Cosmos.</p>
+      <h3>{{ atma_intro.title }}</h3>
+      {{ atma_intro.content|safe }}
     </div>
+    {% endif %}
 
     <div class="classes-section">
-      <div class="class-card">
-        <div class="class-card-content">
-          <h3>First Lesson Special</h3>
-          <ul>
-            <li>Offer: €9 off the first lesson</li>
-            <li>Price: €18 for a single 3-hour session</li>
-            <li>Details: Get started with a discounted rate on your first session.</li>
-          </ul>
+      {% for package in packages %}
+        {% if package.order <= 5 %}
+        <div class="class-card">
+          <div class="class-card-content">
+            <h3>{{ package.name }}</h3>
+            {{ package.description|safe }}
+            {{ package.details|safe }}
+          </div>
+          {% if package.payment_url %}
+          <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
+            <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
+          </a>
+          {% endif %}
         </div>
-        <a href="https://tikkie.me/pay/VanEmmichov/3w1pwfyQUkuXMRGDfGD3vC" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-first.png' %}" alt="QR Code for First Lesson" class="qr-code">
-        </a>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-content">
-          <h3>Single Session</h3>
-          <ul>
-            <li>Price: €27</li>
-            <li>Details: One 3-hour session with no commitment, ideal for a single drop-in experience.</li>
-          </ul>
-        </div>
-        <a href="https://tikkie.me/pay/VanEmmichov/5w4Za7bHhnx5GXLWDpNfdH" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-single.png' %}" alt="QR Code for Single Session" class="qr-code">
-        </a>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-content">
-          <h3>3-Day Pass</h3>
-          <ul>
-            <li>Price: €78 (€26 per session)</li>
-            <li>Validity: Use within 3 months</li>
-            <li>Details: Access any 3 sessions with a small discount to encourage consistency.</li>
-            <li>Savings: €3 discount</li>
-          </ul>
-        </div>
-        <a href="https://tikkie.me/pay/VanEmmichov/jhWdr1fiz33YHziz4CwXCu" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-3day.png' %}" alt="QR Code for 3-Day Pass" class="qr-code">
-        </a>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-content">
-          <h3>5-Day Pass</h3>
-          <ul>
-            <li>Price: €126 (€25.20 per session)</li>
-            <li>Validity: Use within 5 months</li>
-            <li>Details: Enjoy five sessions with a moderate discount for regular practice.</li>
-            <li>Savings: €9 discount</li>
-          </ul>
-        </div>
-        <a href="https://tikkie.me/pay/VanEmmichov/tHJ2ekc9sBni5bhP3rXGZt" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-5day.png' %}" alt="QR Code for 5-Day Pass" class="qr-code">
-        </a>
-      </div>
-
-      <div class="class-card">
-        <div class="class-card-content">
-          <h3>7-Day Pass</h3>
-          <ul>
-            <li>Price: €171 (€24.43 per session)</li>
-            <li>Validity: Use within 6 months</li>
-            <li>Details: A 7-session option with a larger discount, ideal for deeper engagement.</li>
-            <li>Savings: €18 discount</li>
-          </ul>
-        </div>
-        <a href="https://tikkie.me/pay/VanEmmichov/xcGKdorUj7XRCkJp6Q6LAn" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-7day.png' %}" alt="QR Code for 7-Day Pass" class="qr-code">
-        </a>
-      </div>
+        {% endif %}
+      {% endfor %}
     </div>
 
     <hr style="border: 1px solid #8b6f47; margin: 10px 0 30px;">
 
+    {% if stemexpressie_intro %}
     <div style="margin-bottom: 30px;">
-      <h3>Stemexpressie</h3>
+      <h3>{{ stemexpressie_intro.title }}</h3>
+      {{ stemexpressie_intro.content|safe }}
       
-      <h4><strong>What is Stemexpressie?</strong></h4>
-      <p>Stemexpressie (voice-expression) is a playful and liberating way to make your voice sound, give yourself space, and touch deep layers within yourself. The premise is that through sound and expression, you connect more with your inner strength and creativity. Whether you feel tension, shyness, or joy – everything is welcome to be expressed. It is a journey of discovery in sound, where you learn to know and express yourself on a deeper level.</p>
-      
-      <p>This method is practiced as taught by Marius Engelbrecht, an experienced voice-expression coach from The Hague and one of the teachers of Jarin van Emmichoven. His approach helps you to engage with your voice more freely and authentically, using sound as a powerful means of self-expression and inner liberation.</p>
-      
-      <h4><strong>Basic Course Stemexpressie</strong></h4>
-      <p>This course is a dynamic journey in which you gradually liberate your voice, deepen your expression, and discover what sound does for you. Each evening has its own theme and builds upon the previous session, with room for playfulness, depth, and magic.</p>
-      
-      <h4><strong>Program</strong></h4>
-      <p><strong>First Evening: Discovering and Liberating</strong></p>
-      <ul>
-        <li>Introduction and voice warm-up</li>
-        <li>Sound journey and liberating exercises</li>
-        <li>Welcoming tension</li>
-        <li>Group jam session</li>
-      </ul>
-      
-      <p><strong>Second Evening: Rhythm and Jabber</strong></p>
-      <ul>
-        <li>Review and deepening</li>
-        <li>Jabber: rhythm and consonants</li>
-        <li>Duo exercise: Jabber story</li>
-        <li>Lead singing-follow singing</li>
-      </ul>
-      
-      <p><strong>Third Evening: The Healing Voice</strong></p>
-      <ul>
-        <li>Review and deepening</li>
-        <li>Connecting sounds with the body and emotions</li>
-        <li>Dialogue with the body and feelings</li>
-        <li>Letting healing sounds flow</li>
-      </ul>
-      
-      <p><strong>Fourth Evening: The Song of Your Heart</strong></p>
-      <ul>
-        <li>Summary and deepening</li>
-        <li>Solo or duo improvisations</li>
-        <li>Song of your heart</li>
-        <li>Closing: harmony and group singing</li>
-      </ul>
-      
-      <h4><strong>Why This Course?</strong></h4>
-      <p>Compared to Atma Bhavaka, the focus here is less on the spiritual aspects. This means it is ideal for people who feel less drawn to spiritual discovery but are still eager to receive the benefits of voice-expression techniques, such as:</p>
-      <ul>
-        <li>More self-confidence and expression</li>
-        <li>Deeper connection with yourself and your emotions</li>
-        <li>Discovering playfulness and creativity</li>
-        <li>Connection with others through sound and group singing</li>
-      </ul>
-      
-      <h4><strong>Bookings</strong></h4>
-      <div class="stemexpressie-booking" style="display: flex; align-items: flex-start; gap: 20px;">
-        <ul style="flex: 1; margin: 0;">
-          <li>The cost of the basic course is €127</li>
-          <li>The basic course lasts 12 hours (three hours per evening)</li>
-        </ul>
-        <a href="https://tikkie.me/pay/VanEmmichov/tQFjmpdmysN9fxVVM2AHcs" target="_blank" rel="noopener">
-          <img src="{% static 'media/QR-Stemexpressie .png' %}" alt="QR Code for Stemexpressie" class="qr-code">
-        </a>
-      </div>
+      {% for package in packages %}
+        {% if package.order == 6 %}
+        <h4><strong>Booking</strong></h4>
+        <div class="stemexpressie-booking" style="display: flex; align-items: flex-start; gap: 20px;">
+          <div style="flex: 1; margin: 0;">
+            {{ package.description|safe }}
+            {{ package.details|safe }}
+          </div>
+          {% if package.payment_url %}
+          <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
+            <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
+          </a>
+          {% endif %}
+        </div>
+        {% endif %}
+      {% endfor %}
     </div>
+    {% endif %}
 
     <hr style="border: 1px solid #8b6f47; margin: 20px 0;">
 
     <h2 style="margin-top: 20px;">Info</h2>
+    {% if contact_info %}
     <div>
       <h3><strong>Contact</strong></h3>
       <ul>
         <li>
-          <a class="contact-link" href="tel:+4917610716264" target="_blank" rel="noopener">
-            <b>Mobile:</b> +4917610716264
+          <a class="contact-link" href="tel:{{ contact_info.phone }}" target="_blank" rel="noopener">
+            <b>Mobile:</b> {{ contact_info.phone }}
           </a>
         </li>
         <li>
-          <a class="contact-link" href="mailto:jarin.z@hotmail.de" rel="noopener">
-            <b>Email:</b> jarin.z@hotmail.de
+          <a class="contact-link" href="mailto:{{ contact_info.email }}" rel="noopener">
+            <b>Email:</b> {{ contact_info.email }}
           </a>
         </li>
         <li>
-          <a class="contact-link" href="https://www.instagram.com/instagram_profile" target="_blank" rel="noopener">
-            <b>Instagram:</b> atma_bhavaka
+          <a class="contact-link" href="{{ contact_info.instagram_url }}" target="_blank" rel="noopener">
+            <b>Instagram:</b> {{ contact_info.instagram_handle }}
           </a>
         </li>
       </ul>
@@ -249,20 +155,21 @@
     <div>
       <h3><strong>Workshop address:</strong></h3>
       <ul>
-        <li>Dorpsstraat 51</li>
-        <li>7025 AB Halle, Nederland</li>
+        <li>{{ contact_info.workshop_address_line1 }}</li>
+        <li>{{ contact_info.workshop_address_line2 }}</li>
       </ul>
     </div>
 
     <div>
       <h3><strong>Company info:</strong></h3>
       <ul>
-        <li>Van Emmichoven</li>
-        <li>FB Deurvoorstraat 10</li>
-        <li>7071BH Ulft</li>
-        <li>KVK Number: 87915138</li>
+        <li>{{ contact_info.company_name }}</li>
+        <li>{{ contact_info.company_address_line1 }}</li>
+        <li>{{ contact_info.company_address_line2 }}</li>
+        <li>KVK Number: {{ contact_info.company_kvk }}</li>
       </ul>
     </div>
+    {% endif %}
   </div>
 </div>
 {% endblock %}

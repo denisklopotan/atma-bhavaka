@@ -1,0 +1,33 @@
+/* Make the admin editor match website content width (50% of viewport) */
+.form-row {
+    max-width: none !important;
+}
+
+.form-row .cke {
+    width: 100% !important;
+}
+
+/* Adjust field wrapper to match website container width */
+.field-content,
+.field-description,
+.field-details {
+    width: 100% !important;
+}
+
+/* Make text inputs match website width (50vw) */
+.form-row input[type="text"],
+.form-row textarea {
+    width: 100% !important;
+    max-width: 50vw !important;
+}
+
+/* CKEditor specific - match website container width */
+.django-ckeditor-widget {
+    width: 100% !important;
+    max-width: 50vw !important;
+}
+
+.cke_chrome {
+    width: 100% !important;
+    max-width: 50vw !important;
+}

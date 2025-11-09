@@ -39,27 +39,31 @@
         <div class="footer-container">
             <div class="fc-left">
                 <ul class="footer-links">
+                    {% if contact_info %}
                     <li>
-                      <span class="footer-contact-info">+4917610716264</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="tel:+4917610716264" target="_blank" rel="noopener">Mobile &nbsp;<i class="fas fa-phone"></i></a>
+                      <span class="footer-contact-info">{{ contact_info.phone }}</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="tel:{{ contact_info.phone }}" target="_blank" rel="noopener">Mobile &nbsp;<i class="fas fa-phone"></i></a>
                     </li>
                     <li>
-                      <span class="footer-contact-info">jarin.z@hotmail.de</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="mailto:jarin.z@hotmail.de" rel="noopener">Email &nbsp;<i class="fas fa-envelope"></i></a>
+                      <span class="footer-contact-info">{{ contact_info.email }}</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="mailto:{{ contact_info.email }}" rel="noopener">Email &nbsp;<i class="fas fa-envelope"></i></a>
                     </li>
                     <li>
-                      <span class="footer-contact-info">Atma Bhavaka</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="https://www.facebook.com/profile.php?id=61568685404582" target="_blank" rel="noopener">Facebook &nbsp;<i class="fab fa-facebook"></i></a>
+                      <span class="footer-contact-info">{{ contact_info.facebook_name }}</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="{{ contact_info.facebook_url }}" target="_blank" rel="noopener">Facebook &nbsp;<i class="fab fa-facebook"></i></a>
                     </li>
                     <li>
-                      <span class="footer-contact-info">atma.bhavaka</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="https://www.instagram.com/atma.bhavaka" target="_blank" rel="noopener">Instagram &nbsp;<i class="fab fa-instagram"></i></a>
+                      <span class="footer-contact-info">{{ contact_info.instagram_handle }}</span>&nbsp;&nbsp;&nbsp;<a class="footer-links" href="{{ contact_info.instagram_url }}" target="_blank" rel="noopener">Instagram &nbsp;<i class="fab fa-instagram"></i></a>
                     </li>
+                    {% endif %}
                   </ul>
             </div>
             <div class="fc-right">
+                {% if contact_info %}
                 <ul>
-                    <li>Van Emmichoven</li>
-                    <li>FB Deurvoorstraat 10</li>
-                    <li>7071BH Ulft</li>
-                    <li>KVK: 87915138</li>
+                    <li>{{ contact_info.company_name }}</li>
+                    <li>{{ contact_info.company_address_line1 }}</li>
+                    <li>{{ contact_info.company_address_line2 }}</li>
+                    <li>KVK: {{ contact_info.company_kvk }}</li>
                 </ul>
+                {% endif %}
             </div>
         </div>
         <div class="copyright">

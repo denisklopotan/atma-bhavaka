@@ -46,6 +46,8 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+    'content',
+    'ckeditor',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -88,6 +90,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'content.context_processors.contact_info',
             ],
         },
     },
@@ -173,6 +176,25 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# CKEditor Configuration
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source'],
+            ['Format'],
+        ],
+        'format_tags': 'p;h1;h2;h3;h4;h5;h6',
+        'height': 400,
+        'width': '100%',
+        'removePlugins': 'elementspath',
+        'resize_enabled': True,
+    },
+}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
