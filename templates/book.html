@@ -88,8 +88,7 @@
         <div class="class-card">
           <div class="class-card-content">
             <h3>{{ package.name }}</h3>
-            {{ package.description|safe }}
-            {{ package.details|safe }}
+            {{ package.content|safe }}
           </div>
           {% if package.payment_url %}
           <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
@@ -113,8 +112,7 @@
         <h4><strong>Booking</strong></h4>
         <div class="stemexpressie-booking" style="display: flex; align-items: flex-start; gap: 20px;">
           <div style="flex: 1; margin: 0;">
-            {{ package.description|safe }}
-            {{ package.details|safe }}
+            {{ package.content|safe }}
           </div>
           {% if package.payment_url %}
           <a href="{{ package.payment_url }}" target="_blank" rel="noopener">

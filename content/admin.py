@@ -44,14 +44,14 @@ class ContactInfoAdmin(admin.ModelAdmin):
 class PackagePriceAdmin(admin.ModelAdmin):
     list_display = ['name', 'price', 'order', 'is_active']
     list_editable = ['order', 'is_active']
-    search_fields = ['name', 'description']
+    search_fields = ['name', 'content']
     ordering = ['order']
     fieldsets = (
         (None, {
             'fields': ('name', 'price', 'order', 'is_active')
         }),
         ('Content', {
-            'fields': ('description', 'details')
+            'fields': ('content',)
         }),
         ('Payment', {
             'fields': ('payment_url', 'qr_code_image')

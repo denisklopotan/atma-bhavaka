@@ -64,8 +64,7 @@ class PackagePrice(models.Model):
     
     name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    description = RichTextField()
-    details = RichTextField(blank=True)
+    content = RichTextField(help_text="Package details and pricing information", default='')
     payment_url = models.URLField(blank=True)
     qr_code_image = models.CharField(max_length=200, help_text="Filename of QR code image in static/media/")
     order = models.IntegerField(default=0)
