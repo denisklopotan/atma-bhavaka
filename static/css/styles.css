@@ -83,27 +83,37 @@ header nav ul li a:hover {
 
 /*** HOME PAGE ***/
 
-/* Cover image */
+/* Cover slideshow */
 
 .cover {
-    text-align: center;
-    margin-top: -20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* fill viewport minus title (~100px) + header (~50px) + main top padding (20px) + bottom match (20px) */
+    height: calc(100vh - 190px);
+    padding-bottom: 20px;
 }
 
-.cover img {
-    width: 82%;
-    height: auto; 
+.slideshow {
+    max-width: 1152px; /* 1280px * 0.9 */
+    max-height: 90%;
+    box-shadow:
+        0 0 30px 8px rgba(255, 255, 255, 0.12),
+        0 0 60px 15px rgba(255, 255, 255, 0.06);
+    border-radius: 2px;
 }
 
-@media (max-width: 768px) {
-    .cover {
-        display: flex; 
-        justify-content: center;
-    }
-    .cover img {
-        width: 100%;
-        max-width: 100%;
-    }
+.slideshow .slide {
+    display: none;
+    max-width: 100%;
+    max-height: calc((100vh - 190px) * 0.9);
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+}
+
+.slideshow .slide.active {
+    display: block;
 }
 
 /* Container */

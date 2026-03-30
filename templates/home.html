@@ -5,7 +5,12 @@
 {% block content %}
 
 <div class="cover">
-  <img src="{% static 'media/cover-main.png' %}" alt="Om logo">
+  <div class="slideshow">
+    <img src="{% static 'media/Slide1.JPG' %}" alt="Slide 1" class="slide active">
+    <img src="{% static 'media/Slide2.JPG' %}" alt="Slide 2" class="slide">
+    <img src="{% static 'media/Slide3.JPG' %}" alt="Slide 3" class="slide">
+    <img src="{% static 'media/Slide4.JPG' %}" alt="Slide 4" class="slide">
+  </div>
 </div>
 
 <div class="container">
@@ -37,4 +42,16 @@
     </iframe>
   </div>
 </div>
+{% endblock %}
+
+{% block extrajs %}
+<script>
+  const slides = document.querySelectorAll('.slideshow .slide');
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 3000);
+</script>
 {% endblock %}
