@@ -5,8 +5,7 @@
 {% block extracss %}
 <style>
     main {
-        background-color: #bd9640; /* contact page background color */
-        /* background-color: #cf824a; */
+        background-color: #bd9640;
         padding: 40px 20px 40px;
     }
 
@@ -33,48 +32,61 @@
         font-weight: bold;
     }
 
+    .qr-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
     .qr-code {
         width: 110px;
         height: auto;
-        flex-shrink: 0;
-        padding: 32.5px;
+        padding: 32.5px 32.5px 16.5px;
+    }
+
+    .qr-label {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #2c1e12;
+        margin-top: 4px;
     }
 
     @media (max-width: 768px) {
-    main {
-        padding: 20px; /* Reduced padding for smaller screens */
-    }
-    
-    .class-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .qr-code {
-        width: 110px;
-        padding: 0;
-        margin-left: 40px;
-    }
-    
-    .stemexpressie-booking {
-        flex-direction: column !important;
-        align-items: flex-start;
-    }
-    
-    .stemexpressie-booking .qr-code {
-        margin-left: 40px;
-    }
+        main {
+            padding: 20px;
+        }
+
+        .class-card {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .qr-wrapper {
+            margin-left: 40px;
+        }
+
+        .qr-code {
+            padding: 0;
+        }
+
+        .stemexpressie-booking {
+            flex-direction: column !important;
+            align-items: flex-start;
+        }
+
+        .stemexpressie-booking .qr-wrapper {
+            margin-left: 40px;
+        }
     }
 </style>
 {% endblock %}
 
 {% block content %}
-<!-- <h1>Contact & Bookings</h1> -->
-<!-- Contact Links -->
 <div class="container">
   <div class="book-page">
     <h2 style="margin-top: 0px;">Program & Booking</h2>
-    
+
     {% if atma_intro %}
     <div style="margin-bottom: 30px;">
       <h3>{{ atma_intro.title }}</h3>
@@ -91,9 +103,12 @@
             {{ package.content|safe }}
           </div>
           {% if package.payment_url %}
-          <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
-            <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
-          </a>
+          <div class="qr-wrapper">
+            <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
+              <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
+            </a>
+            <span class="qr-label">Click me!</span>
+          </div>
           {% endif %}
         </div>
         {% endif %}
@@ -106,7 +121,7 @@
     <div style="margin-bottom: 30px;">
       <h3>{{ stemexpressie_intro.title }}</h3>
       {{ stemexpressie_intro.content|safe }}
-      
+
       {% for package in packages %}
         {% if package.order == 6 %}
         <h4><strong>Booking</strong></h4>
@@ -115,9 +130,12 @@
             {{ package.content|safe }}
           </div>
           {% if package.payment_url %}
-          <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
-            <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
-          </a>
+          <div class="qr-wrapper">
+            <a href="{{ package.payment_url }}" target="_blank" rel="noopener">
+              <img src="{% static 'media/' %}{{ package.qr_code_image }}" alt="QR Code for {{ package.name }}" class="qr-code">
+            </a>
+            <span class="qr-label">Click me!</span>
+          </div>
           {% endif %}
         </div>
         {% endif %}
