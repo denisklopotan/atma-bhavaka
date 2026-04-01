@@ -8,7 +8,7 @@ html, body {
 body {
     background-color: black;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -56,7 +56,7 @@ main {
 }
 
 header {
-    background-color: #c9a04d;
+    background-color: #e9bd64;
     color: #000000;
     /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
@@ -315,7 +315,8 @@ footer i {
 .copyright {
     color: #daab5f;
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
+    font-family: "Passions Conflict", serif;
 }
 
 .heart {
