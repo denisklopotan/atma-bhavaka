@@ -47,11 +47,11 @@ main {
     margin: 0;
     padding: 25px 20px;
     text-align: center;
-    /* font-family: "Srisakdi", serif; */
+    font-family: "Passions Conflict", serif;
     /* font-family: "Tapestry", serif; */
-    font-family: auto;
+    /* font-family: auto; */
     font-weight: 400;
-    font-size: 50px;
+    font-size: 80px;
     /* text-shadow: 4px 4px 8px rgb(0, 0, 0); */
 }
 
@@ -97,7 +97,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     /* fill viewport minus title (~100px) + header (~50px) + main top padding (20px) + bottom match (20px) */
-    height: calc(100vh - 190px);
+    height: calc(100vh - 235px);
     padding-bottom: 20px;
 }
 
@@ -113,7 +113,7 @@ header nav ul li a:hover {
 .slideshow .slide {
     display: none;
     max-width: 100%;
-    max-height: calc((100vh - 190px) * 0.9);
+    max-height: calc((100vh - 235px) * 0.9);
     width: auto;
     height: auto;
     border-radius: 2px;
