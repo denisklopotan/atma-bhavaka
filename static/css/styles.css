@@ -33,6 +33,13 @@ main {
 
 /*** HEADER & NAVBAR ***/
 
+#title-logo {
+    height: 1.2em;
+    width: auto;
+    vertical-align: bottom;
+    margin-right: 12px;
+}
+
 #webpage-title {
     background-color: #d9a955;
     /* background-color: #c9a160; */
