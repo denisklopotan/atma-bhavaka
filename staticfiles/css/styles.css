@@ -8,7 +8,7 @@ html, body {
 body {
     background-color: black;
     color: black;
-    font-family: Arial, sans-serif;
+    font-family: none;
     margin: 0;
     padding: 0;
     display: flex;
@@ -47,16 +47,16 @@ main {
     margin: 0;
     padding: 25px 20px;
     text-align: center;
-    /* font-family: "Srisakdi", serif; */
+    font-family: "Passions Conflict", serif;
     /* font-family: "Tapestry", serif; */
-    font-family: auto;
+    /* font-family: auto; */
     font-weight: 400;
-    font-size: 50px;
+    font-size: 80px;
     /* text-shadow: 4px 4px 8px rgb(0, 0, 0); */
 }
 
 header {
-    background-color: #c9a04d;
+    background-color: #e9bd64;
     color: #000000;
     /* border-bottom: 1px solid #474747; */
     padding: 15px 20px;
@@ -97,7 +97,7 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     /* fill viewport minus title (~100px) + header (~50px) + main top padding (20px) + bottom match (20px) */
-    height: calc(100vh - 190px);
+    height: calc(100vh - 235px);
     padding-bottom: 20px;
 }
 
@@ -113,7 +113,7 @@ header nav ul li a:hover {
 .slideshow .slide {
     display: none;
     max-width: 100%;
-    max-height: calc((100vh - 190px) * 0.9);
+    max-height: calc((100vh - 235px) * 0.9);
     width: auto;
     height: auto;
     border-radius: 2px;
@@ -121,6 +121,42 @@ header nav ul li a:hover {
 
 .slideshow .slide.active {
     display: block;
+}
+
+/* Mobile slideshow */
+
+.cover-mobile {
+    display: none;
+}
+
+@media (max-width: 786px) {
+    .cover-desktop {
+        display: none;
+    }
+
+    .cover-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 30px;
+    }
+
+    .slideshow-mobile {
+        width: 90vw;
+        max-width: 400px;
+        position: relative;
+    }
+
+    .slideshow-mobile .slide-mobile {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .slideshow-mobile .slide-mobile.active {
+        display: block;
+    }
 }
 
 /* Container */
@@ -315,7 +351,8 @@ footer i {
 .copyright {
     color: #daab5f;
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
+    font-family: "Passions Conflict", serif;
 }
 
 .heart {

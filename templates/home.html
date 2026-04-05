@@ -4,12 +4,21 @@
 
 {% block content %}
 
-<div class="cover">
+<div class="cover cover-desktop">
   <div class="slideshow">
     <img src="{% static 'media/Slide1.JPG' %}" alt="Slide 1" class="slide active">
     <img src="{% static 'media/Slide2.JPG' %}" alt="Slide 2" class="slide">
     <img src="{% static 'media/Slide3.JPG' %}" alt="Slide 3" class="slide">
     <img src="{% static 'media/Slide4.JPG' %}" alt="Slide 4" class="slide">
+  </div>
+</div>
+
+<div class="cover-mobile">
+  <div class="slideshow-mobile">
+    <img src="{% static 'media/Slide_small1.png' %}" alt="Slide 1" class="slide-mobile active">
+    <img src="{% static 'media/Slide_small2.png' %}" alt="Slide 2" class="slide-mobile">
+    <img src="{% static 'media/Slide_small3.png' %}" alt="Slide 3" class="slide-mobile">
+    <img src="{% static 'media/Slide_small4.png' %}" alt="Slide 4" class="slide-mobile">
   </div>
 </div>
 
@@ -46,12 +55,18 @@
 
 {% block extrajs %}
 <script>
-  const slides = document.querySelectorAll('.slideshow .slide');
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 3000);
+  function startSlideshow(selector, interval) {
+    const slides = document.querySelectorAll(selector);
+    if (!slides.length) return;
+    let current = 0;
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, interval);
+  }
+
+  startSlideshow('.slideshow .slide', 3000);
+  startSlideshow('.slideshow-mobile .slide-mobile', 3000);
 </script>
 {% endblock %}

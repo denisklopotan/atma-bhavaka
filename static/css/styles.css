@@ -123,6 +123,42 @@ header nav ul li a:hover {
     display: block;
 }
 
+/* Mobile slideshow */
+
+.cover-mobile {
+    display: none;
+}
+
+@media (max-width: 786px) {
+    .cover-desktop {
+        display: none;
+    }
+
+    .cover-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0 30px;
+    }
+
+    .slideshow-mobile {
+        width: 90vw;
+        max-width: 400px;
+        position: relative;
+    }
+
+    .slideshow-mobile .slide-mobile {
+        display: none;
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .slideshow-mobile .slide-mobile.active {
+        display: block;
+    }
+}
+
 /* Container */
 
 .container {
